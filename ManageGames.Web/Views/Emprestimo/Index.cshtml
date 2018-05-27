@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ManageGames.Web.Models.EmprestimoVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Jogos Emprestados</h2>
+
+<p>
+    @Html.ActionLink("Emprestar Jogo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amigo.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jogo.Nome)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amigo.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jogo.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Devolver Jogo", "Delete", new {id = item.Id})
+                </td>
+            </tr>
+        }
+    }
+
+</table>
