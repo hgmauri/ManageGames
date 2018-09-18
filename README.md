@@ -2,7 +2,7 @@
 
 # Tecnologias
 - ASP.NET MVC (Classic .Net Framework 4.6.1)
-- Automapper 7
+- Automapper 7.0
 - EntityFramework 6.1.3
 - Dapper 1.50.5
 - Ninject 3.2
